@@ -1,0 +1,455 @@
+/* ========================================
+   PAGE CONTACT - STYLES
+   ======================================== */
+
+/* Hero Contact */
+.contact-hero {
+    padding: 8rem 0 4rem;
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(26, 159, 218, 0.1) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+}
+
+.contact-hero__content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero__title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.contact-hero__subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Contact Info Cards */
+.contact-info {
+    padding: 4rem 0;
+    background: #000000;
+}
+
+.contact-info__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.contact-info__card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact-info__card:hover {
+    border-color: rgba(26, 159, 218, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(26, 159, 218, 0.15);
+}
+
+.contact-info__icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(26, 159, 218, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #1A9FDA;
+    transition: all 0.3s ease;
+}
+
+.contact-info__card:hover .contact-info__icon {
+    background: rgba(26, 159, 218, 0.15);
+    transform: scale(1.1);
+}
+
+.contact-info__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.contact-info__link {
+    display: block;
+    font-size: 1.125rem;
+    color: #1A9FDA;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-info__link:hover {
+    color: #FEF00D;
+}
+
+.contact-info__text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9375rem;
+}
+
+/* Contact Hours */
+.contact-hours {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+}
+
+.contact-hours__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-hours__card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.contact-hours__card--highlight {
+    border-color: rgba(254, 240, 13, 0.2);
+}
+
+.contact-hours__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(26, 159, 218, 0.15);
+}
+
+.contact-hours__card--highlight:hover {
+    box-shadow: 0 10px 30px rgba(254, 240, 13, 0.15);
+}
+
+.contact-hours__icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(26, 159, 218, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #1A9FDA;
+}
+
+.contact-hours__card--highlight .contact-hours__icon {
+    background: rgba(254, 240, 13, 0.1);
+    color: #FEF00D;
+}
+
+.contact-hours__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+}
+
+.contact-hours__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-hours__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.875rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-hours__row:last-of-type {
+    border-bottom: none;
+}
+
+.contact-hours__time {
+    font-weight: 600;
+    color: #1A9FDA;
+}
+
+.contact-hours__note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.875rem;
+    background: rgba(26, 159, 218, 0.05);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+}
+
+.contact-hours__card--highlight .contact-hours__note {
+    background: rgba(254, 240, 13, 0.05);
+}
+
+/* Contact Map */
+.contact-map {
+    padding: 4rem 0;
+    background: #000000;
+}
+
+.contact-map__wrapper {
+    margin-top: 2rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-map__iframe {
+    display: block;
+    width: 100%;
+    filter: grayscale(20%) brightness(0.9);
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+}
+
+.contact-form__header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.contact-form__wrapper {
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Form Styles */
+.form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+}
+
+.form__label {
+    display: block;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+}
+
+.form__required {
+    color: #1A9FDA;
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #FFFFFF;
+    
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+    outline: none;
+    border-color: #1A9FDA;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(26, 159, 218, 0.1);
+}
+
+.form__select {
+    cursor: pointer;
+}
+
+.form__textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* File Upload */
+.form__file {
+    position: relative;
+}
+
+.form__file-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form__file-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form__file-label:hover {
+    border-color: #1A9FDA;
+    background: rgba(26, 159, 218, 0.05);
+}
+
+.form__file-text {
+    font-size: 0.9375rem;
+}
+
+.form__file-name {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #1A9FDA;
+    font-weight: 600;
+}
+
+/* Checkbox */
+.form__checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.form__checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.form__checkbox-mark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.form__checkbox input[type="checkbox"]:checked + .form__checkbox-mark {
+    background: #1A9FDA;
+    border-color: #1A9FDA;
+}
+
+.form__checkbox input[type="checkbox"]:checked + .form__checkbox-mark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form__checkbox-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+.form__link {
+    color: #1A9FDA;
+    text-decoration: underline;
+}
+
+.form__link:hover {
+    color: #FEF00D;
+}
+
+.form__submit {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 6rem 0 3rem;
+    }
+    
+    .contact-info,
+    .contact-hours,
+    .contact-map,
+    .contact-form {
+        padding: 3rem 0;
+    }
+    
+    .contact-info__grid,
+    .contact-hours__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form__wrapper {
+        padding: 2rem;
+    }
+    
+    .contact-map__wrapper {
+        border-radius: 12px;
+    }
+    
+    .contact-map__iframe {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero__title {
+        font-size: 2.5rem;
+    }
+    
+    .contact-info__card,
+    .contact-hours__card {
+        padding: 2rem;
+    }
+    
+    .contact-form__wrapper {
+        padding: 1.5rem;
+    }
+}

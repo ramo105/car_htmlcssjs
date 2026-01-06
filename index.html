@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MND Permis - Auto-école  Permis B, B78, AAC et permis moto. Piste privée, moniteurs qualifiés, faible temps d'attente.">
+    <title>MND Permis - Auto-École  | Permis Voiture & Moto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <img src="images/logo.png" onclick="addEventListener('click',function(){
+                    window.location.href = 'index.html'
+                })" alt="MND Permis Logo" class="nav__logo-img">
+                
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="formules.html" class="nav__link">Formules</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="formules.html#financement" class="nav__link">Financement</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                   
+                </ul>
+                
+            </div>
+            
+            <div class="nav__cta">
+                <a href="inscription.html" class="btn btn--outline btn--small">Se connecter</a>
+                <a href="inscription.html" class="btn btn--primary btn--small">S'inscrire</a>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="accueil">
+            <div class="hero__background"></div>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        MND Permis <span style="color: yellow;margin-left: 10px;margin-right: 10px;">—</span>Auto & Moto<br>
+                        <span class="hero__title--highlight">en toute confiance</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Auto-école moderne avec piste privée • Moniteurs diplômés • Faible temps d'attente
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="formules.html" class="btn btn--primary">
+                            <span>Voir les formules</span>
+                            <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="inscription.html" class="btn btn--secondary">S'inscrire maintenant</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="./images/chemin.png" alt="">
+                    <img src="./images/voiture-icon.png" alt="" class="img-1">
+
+                </div>
+            </div>
+            <div class="hero__scroll">
+                <span>Découvrir</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14m0 0l-7-7m7 7l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Promotions Moto Section -->
+        <section class="promo" id="promo-moto">
+            <div class="container">
+                <div class="promo__header">
+                    <span class="promo__badge">OFFRE LIMITÉE</span>
+                    <h2 class="section__title">Offres Permis Moto A2</h2>
+                    <p class="section__subtitle">Pour les 20 premiers inscrits</p>
+                </div>
+                
+                <div class="promo__grid">
+                    <!-- A2 Manuelle -->
+                    <div class="promo__card">
+                        <div class="promo__card-badge">PROMO -20%</div>
+                        <div class="promo__card-header">
+                            <h3 class="promo__card-title">A2 Manuelle</h3>
+                            <p class="promo__card-hours">20 heures de formation</p>
+                        </div>
+                        <div class="promo__card-price">
+                            <span class="promo__price-old">1240€</span>
+                            <span class="promo__price-new">990€</span>
+                            <span class="promo__price-tax">TTC</span>
+                        </div>
+                        <ul class="promo__card-features">
+                            <li>✓ Inscription + dossier</li>
+                            <li>✓ Code illimité 6 mois</li>
+                            <li>✓ 12h plateau + 8h circuit</li>
+                            <li>✓ Accompagnement examen</li>
+                        </ul>
+                    </div>
+
+                    <!-- A2 Automatique -->
+                    <div class="promo__card">
+                        <div class="promo__card-badge">PROMO -17%</div>
+                        <div class="promo__card-header">
+                            <h3 class="promo__card-title">A2 Automatique</h3>
+                            <p class="promo__card-hours">14 heures de formation</p>
+                        </div>
+                        <div class="promo__card-price">
+                            <span class="promo__price-old">1200€</span>
+                            <span class="promo__price-new">990€</span>
+                            <span class="promo__price-tax">TTC</span>
+                        </div>
+                        <ul class="promo__card-features">
+                            <li>✓ Inscription + dossier</li>
+                            <li>✓ Code illimité 6 mois</li>
+                            <li>✓ 8h plateau + 6h circuit</li>
+                            <li>✓ Accompagnement pratique</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="promo__cta">
+                    <a href="formules.html#moto" class="btn btn--primary">Voir toutes les formules moto</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Présentation Section -->
+        <!-- Section À Propos - Timeline Professionnelle -->
+        <section class="about">
+            <div class="container">
+                <!-- Header -->
+                <div class="about__header">
+                    <h2 class="section__title">Notre Histoire</h2>
+                    <p class="section__subtitle">Une passion pour l'enseignement de la conduite depuis plus de 10 ans</p>
+                </div>
+
+                <!-- Timeline -->
+                <div class="about__timeline">
+                    <!-- Étape 1 - Fondation -->
+                    <div class="timeline__item timeline__item--left">
+                        <div class="timeline__content">
+                            <div class="timeline__year">2015</div>
+                            <div class="timeline__card">
+                                <div class="timeline__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                        <polyline points="9 22 9 12 15 12 15 22"/>
+                                    </svg>
+                                </div>
+                                <h3 class="timeline__title">Fondation de MND Permis</h3>
+                                <p class="timeline__text">Ouverture de notre première agence avec une vision claire : offrir une formation de qualité accessible à tous.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__image">
+                            <img src="images/bureau.png" alt="Fondation MND Permis 2015" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Étape 2 - Piste privée -->
+                    <div class="timeline__item timeline__item--right">
+                        <div class="timeline__image">
+                            <img src="images/real_voiture.png" alt="Piste privée MND Permis" loading="lazy">
+                        </div>
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content">
+                            <div class="timeline__year">2018</div>
+                            <div class="timeline__card">
+                                <div class="timeline__icon timeline__icon--blue">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="timeline__title">Inauguration de la piste privée</h3>
+                                <p class="timeline__text">Acquisition d'une infrastructure exclusive dédiée à nos élèves pour un apprentissage optimal et sécurisé.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Étape 3 - Formation moto -->
+                    <div class="timeline__item timeline__item--left">
+                        <div class="timeline__content">
+                            <div class="timeline__year">2020</div>
+                            <div class="timeline__card">
+                                <div class="timeline__icon timeline__icon--yellow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                </div>
+                                <h3 class="timeline__title">Lancement des formations moto</h3>
+                                <p class="timeline__text">Extension de notre offre avec les permis A2 manuel et automatique pour répondre à la demande croissante.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__image">
+                            <img src="images/real_moto.jpg" alt="Formation moto MND Permis" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Étape 4 - Aujourd'hui -->
+                    <div class="timeline__item timeline__item--right">
+                        <div class="timeline__image">
+                            <img src="images/image00004.PNG" alt="Formation moto MND Permis" loading="lazy">
+                        </div>
+                        <div class="timeline__dot timeline__dot--current"></div>
+                        <div class="timeline__content">
+                            <div class="timeline__year timeline__year--current">2025</div>
+                            <div class="timeline__card timeline__card--highlight">
+                                <div class="timeline__icon timeline__icon--star">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="timeline__title">MND Permis aujourd'hui</h3>
+                                <p class="timeline__text">Une référence en formation à la conduite avec une équipe passionnée et des résultats qui parlent d'eux-mêmes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloc Équipe et Permis -->
+                <div class="about__info">
+                    <div class="about__info-grid">
+                        <!-- Permis proposés -->
+                        <div class="about__info-card">
+                            <div class="about__info-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="1" y="3" width="15" height="13"/>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                                    <circle cx="5.5" cy="18.5" r="2.5"/>
+                                    <circle cx="18.5" cy="18.5" r="2.5"/>
+                                </svg>
+                            </div>
+                            <h3 class="about__info-title">Permis Voiture</h3>
+                            <ul class="about__info-list">
+                                <li>Permis B (Manuelle)</li>
+                                <li>Permis B78 (Automatique)</li>
+                                <li>AAC / Conduite Supervisée</li>
+                                <li>Formation accélérée</li>
+                            </ul>
+                        </div>
+
+                        <!-- Permis moto -->
+                        <div class="about__info-card">
+                            <div class="about__info-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM12 5l3 4h4l-3-4zM5 15l3-4 4 4M19 15l-4-4"/>
+                                </svg>
+                            </div>
+                            <h3 class="about__info-title">Permis Moto</h3>
+                            <ul class="about__info-list">
+                                <li>Permis A2 Manuel (20h)</li>
+                                <li>Permis A2 Automatique (14h)</li>
+                                <li>Passerelle A2 → A (7h)</li>
+                                <li>Accompagnement examen</li>
+                            </ul>
+                        </div>
+
+                        <!-- Équipe -->
+                        <div class="about__info-card">
+                            <div class="about__info-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h3 class="about__info-title">Notre Équipe</h3>
+                            <ul class="about__info-list">
+                                <li>Moniteurs diplômés d'État</li>
+                                <li>Expérience pédagogique confirmée</li>
+                                <li>À l'écoute des élèves</li>
+                                <li>Formation continue</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Avantages Section -->
+        <section class="advantages">
+            <div class="container">
+                <h2 class="section__title section__title--center">Nos Avantages</h2>
+                <p class="section__subtitle section__subtitle--center">Ce qui nous distingue</p>
+                
+                <div class="advantages__grid">
+                    <div class="advantage__card">
+                        <div class="advantage__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="advantage__title">Disponibilité maximale</h3>
+                        <p class="advantage__text">Cours disponibles 7j/7 avec des créneaux flexibles adaptés à votre emploi du temps.</p>
+                    </div>
+
+                    <div class="advantage__card">
+                        <div class="advantage__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="advantage__title">Faible temps d'attente</h3>
+                        <p class="advantage__text">Passez votre examen rapidement grâce à notre organisation optimisée.</p>
+                    </div>
+
+                    <div class="advantage__card advantage__card--highlight">
+                        <div class="advantage__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="advantage__title">Piste privée exclusive</h3>
+                        <p class="advantage__text">Bénéficiez d'une piste privée réservée uniquement à MND Permis pour un apprentissage optimal.</p>
+                    </div>
+
+                    <div class="advantage__card">
+                        <div class="advantage__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="advantage__title">Moniteurs qualifiés</h3>
+                        <p class="advantage__text">Équipe de moniteurs diplômés d'État, expérimentés et pédagogues.</p>
+                    </div>
+
+                    <div class="advantage__card">
+                        <div class="advantage__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="advantage__title">Paiement fractionné</h3>
+                        <p class="advantage__text">Possibilité de payer en 2 ou 3 fois sans frais selon la formule choisie.</p>
+                    </div>
+
+                    <div class="advantage__card">
+                        <div class="advantage__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="advantage__title">Accompagnement complet</h3>
+                        <p class="advantage__text">De l'inscription à l'obtention du permis, nous vous accompagnons à chaque étape.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horaires Section -->
+        <section class="hours">
+            <div class="container">
+                <div class="hours__grid">
+                    <div class="hours__card">
+                        <div class="hours__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="hours__title">Horaires Agence</h3>
+                        <div class="hours__content">
+                            <div class="hours__row">
+                                <span>Lundi - Vendredi</span>
+                                <span class="hours__time">9h - 18h</span>
+                            </div>
+                            <div class="hours__row">
+                                <span>Samedi</span>
+                                <span class="hours__time">9h - 14h</span>
+                            </div>
+                            <div class="hours__row">
+                                <span>Dimanche</span>
+                                <span class="hours__time">Fermé</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hours__card hours__card--highlight">
+                        <div class="hours__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="hours__title">Horaires Conduite</h3>
+                        <div class="hours__content">
+                            <div class="hours__row">
+                                <span>Tous les jours</span>
+                                <span class="hours__time">7h - 20h</span>
+                            </div>
+                            <div class="hours__note">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Y compris weekends et jours fériés</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Avis Google Section -->
+        <!-- Section Avis Google - Design Professionnel -->
+        <section class="reviews">
+            <div class="container">
+                <!-- Header avec logo Google -->
+                <div class="reviews__header">
+                    <div class="reviews__google-badge">
+                        <svg class="reviews__google-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                        </svg>
+                        <span class="reviews__google-text">Avis Google</span>
+                    </div>
+                    <div class="reviews__rating">
+                        <div class="reviews__stars-display">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FEF00D">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FEF00D">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FEF00D">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FEF00D">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FEF00D">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <span class="reviews__rating-number">4.9/5</span>
+                        <span class="reviews__rating-count">(127 avis)</span>
+                    </div>
+                </div>
+
+                <!-- Grille des avis -->
+                <div class="reviews__grid">
+                    <!-- Avis 1 -->
+                    <article class="review__card">
+                        <div class="review__header">
+                            <div class="review__author-info">
+                                <div class="review__avatar">S</div>
+                                <div class="review__author-details">
+                                    <h4 class="review__name">Sarah M.</h4>
+                                    <time class="review__date">Il y a 2 semaines</time>
+                                </div>
+                            </div>
+                            <div class="review__stars">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="review__text">Excellente auto-école ! Moniteurs très professionnels et pédagogues. J'ai obtenu mon permis du premier coup grâce à leur accompagnement.</p>
+                    </article>
+
+                    <!-- Avis 2 -->
+                    <article class="review__card">
+                        <div class="review__header">
+                            <div class="review__author-info">
+                                <div class="review__avatar">K</div>
+                                <div class="review__author-details">
+                                    <h4 class="review__name">Karim B.</h4>
+                                    <time class="review__date">Il y a 1 mois</time>
+                                </div>
+                            </div>
+                            <div class="review__stars">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="review__text">La piste privée est un vrai plus ! On peut vraiment s'entraîner dans de bonnes conditions. Je recommande à 100%.</p>
+                    </article>
+
+                    <!-- Avis 3 -->
+                    <article class="review__card">
+                        <div class="review__header">
+                            <div class="review__author-info">
+                                <div class="review__avatar">A</div>
+                                <div class="review__author-details">
+                                    <h4 class="review__name">Amina L.</h4>
+                                    <time class="review__date">Il y a 3 semaines</time>
+                                </div>
+                            </div>
+                            <div class="review__stars">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="review__text">Très bon suivi, équipe à l'écoute et disponible. Les délais pour passer l'examen sont vraiment courts comparé à d'autres auto-écoles.</p>
+                    </article>
+
+                    <!-- Avis 4 -->
+                    <article class="review__card">
+                        <div class="review__header">
+                            <div class="review__author-info">
+                                <div class="review__avatar">Y</div>
+                                <div class="review__author-details">
+                                    <h4 class="review__name">Youssef K.</h4>
+                                    <time class="review__date">Il y a 2 mois</time>
+                                </div>
+                            </div>
+                            <div class="review__stars">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="review__text">Formation au top pour le permis moto. Les moniteurs sont patients et très compétents. Merci MND Permis !</p>
+                    </article>
+
+                    <!-- Avis 5 -->
+                    <article class="review__card">
+                        <div class="review__header">
+                            <div class="review__author-info">
+                                <div class="review__avatar">M</div>
+                                <div class="review__author-details">
+                                    <h4 class="review__name">Mohamed R.</h4>
+                                    <time class="review__date">Il y a 1 semaine</time>
+                                </div>
+                            </div>
+                            <div class="review__stars">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="review__text">Auto-école sérieuse avec un excellent rapport qualité-prix. Je suis très satisfait de mon expérience.</p>
+                    </article>
+
+                    <!-- Avis 6 -->
+                    <article class="review__card">
+                        <div class="review__header">
+                            <div class="review__author-info">
+                                <div class="review__avatar">L</div>
+                                <div class="review__author-details">
+                                    <h4 class="review__name">Leila T.</h4>
+                                    <time class="review__date">Il y a 3 mois</time>
+                                </div>
+                            </div>
+                            <div class="review__stars">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FEF00D">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="review__text">Très bonne auto-école. Équipements modernes et moniteurs à l'écoute. Je recommande vivement !</p>
+                    </article>
+                </div>
+
+                <!-- CTA pour voir tous les avis -->
+                <div class="reviews__cta">
+                    <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" class="reviews__link">
+                        <span>Voir tous les avis sur Google Maps</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m0 0l-7-7m7 7l-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final Section -->
+        <section class="cta-final">
+            <div class="container">
+                <div class="cta-final__content">
+                    <div class="cta-final__badge">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>Rejoignez-nous</span>
+                    </div>
+                    <h2 class="cta-final__title">Commencez votre formation dès aujourd'hui</h2>
+                    <p class="cta-final__text">Plus de 500 élèves nous ont fait confiance pour obtenir leur permis de conduire</p>
+                    <div class="cta-final__stats">
+                        <div class="cta-final__stat">
+                            <span class="cta-final__stat-number">95%</span>
+                            <span class="cta-final__stat-label">Taux de réussite</span>
+                        </div>
+                        <div class="cta-final__stat">
+                            <span class="cta-final__stat-number">7j/7</span>
+                            <span class="cta-final__stat-label">Disponibilité</span>
+                        </div>
+                        <div class="cta-final__stat">
+                            <span class="cta-final__stat-number">500+</span>
+                            <span class="cta-final__stat-label">Élèves formés</span>
+                        </div>
+                    </div>
+                    <div class="cta-final__buttons">
+                        <a href="inscription.html" class="btn btn--primary btn--large">
+                            <span>S'inscrire maintenant</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14m0 0l-7-7m7 7l-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="contact.html" class="btn btn--outline btn--large">Nous contacter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__logo">
+                        <img src="images/logo.png" alt="MND Permis" class="footer__logo-img">
+                    </div>
+                    <p class="footer__desc">Votre auto-école de confiance pour l'obtention de votre permis de conduire.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Navigation</h4>
+                    <ul class="footer__links">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="formules.html">Formules</a></li>
+                        <li><a href="formules.html#financement">Financement</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="inscription.html">S'inscrire</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Nos Permis</h4>
+                    <ul class="footer__links">
+                        <li><a href="formules.html#permis-b">Permis B (Manuelle)</a></li>
+                        <li><a href="formules.html#permis-b78">Permis B78 (Auto)</a></li>
+                        <li><a href="formules.html#aac">AAC / Conduite Supervisée</a></li>
+                        <li><a href="formules.html#moto">Permis Moto A2</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__contact">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <a href="tel:+212600000000">+212 6 00 00 00 00</a>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <a href="mailto:mndpermis@gmail.com">mndpermis@gmail.com</a>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Paris, France</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <span>•</span>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                    <span>•</span>
+                    <a href="rgpd.html">RGPD</a>
+                </div>
+                <p class="footer__copyright">© 2026 MND Permis. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
