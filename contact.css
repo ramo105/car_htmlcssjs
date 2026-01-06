@@ -298,7 +298,9 @@
 .form__select {
     cursor: pointer;
 }
-
+.form__select option{
+    background-color: #1A9FDA;
+}
 .form__textarea {
     resize: vertical;
     min-height: 150px;
