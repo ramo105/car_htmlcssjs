@@ -263,7 +263,7 @@ scrollTopStyle.textContent = `
         right: 2rem;
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, #1A9FDA 0%, #0D7BC5 100%);
+        background: linear-gradient(135deg, #3B82F6 0%, #0D7BC5 100%);
         border: none;
         border-radius: 50%;
         color: white;
@@ -275,7 +275,7 @@ scrollTopStyle.textContent = `
         visibility: hidden;
         transform: translateY(100px);
         transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(26, 159, 218, 0.3);
+        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
         z-index: 999;
     }
     
@@ -287,7 +287,7 @@ scrollTopStyle.textContent = `
     
     .scroll-top:hover {
         transform: translateY(-5px);
-        box-shadow: 0 6px 25px rgba(26, 159, 218, 0.4);
+        box-shadow: 0 6px 25px rgba(59, 130, 246, 0.4);
     }
     
     .scroll-top svg {
@@ -378,7 +378,7 @@ skipLinkStyle.textContent = `
         position: absolute;
         top: -40px;
         left: 0;
-        background: #1A9FDA;
+        background: #3B82F6;
         color: white;
         padding: 8px;
         text-decoration: none;
@@ -401,8 +401,8 @@ cards.forEach(card => {
 // CONSOLE MESSAGE
 // ========================================
 
-console.log('%c MND PERMIS ', 'background: #1A9FDA; color: white; font-size: 20px; padding: 10px;');
-console.log('%c Développé avec ❤️ ', 'background: #FEF00D; color: black; font-size: 14px; padding: 5px;');
+console.log('%c MND PERMIS ', 'background: #3B82F6; color: white; font-size: 20px; padding: 10px;');
+console.log('%c Développé avec ❤️ ', 'background: #F5C400; color: black; font-size: 14px; padding: 5px;');
 
 // ========================================
 // PERFORMANCE MONITORING
