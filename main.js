@@ -5,6 +5,7 @@
 // Strict mode
 'use strict';
 
+
 // ========================================
 // NAVIGATION
 // ========================================
@@ -19,6 +20,14 @@ if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+        
+        // Empêcher le scroll quand menu ouvert
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
     });
 }
 
@@ -27,39 +36,23 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
     });
 });
 
-// Header scroll effect
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('active')) {
+        // Si on clique en dehors du menu et du bouton toggle
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            document.body.style.overflow = '';
+        }
     }
 });
-
-// Active nav link on scroll
-const sections = document.querySelectorAll('section[id]');
-
-function activeNavLink() {
-    const scrollY = window.pageYOffset;
-    
-    sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector(`.nav__link[href*=${sectionId}]`)?.classList.add('active');
-        } else {
-            document.querySelector(`.nav__link[href*=${sectionId}]`)?.classList.remove('active');
-        }
-    });
-}
-
-window.addEventListener('scroll', activeNavLink);
-
 // ========================================
 // SMOOTH SCROLL
 // ========================================
@@ -383,6 +376,7 @@ skipLinkStyle.textContent = `
         padding: 8px;
         text-decoration: none;
         z-index: 10000;
+        display:none;
     }
     
     .skip-link:focus {

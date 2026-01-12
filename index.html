@@ -60,34 +60,55 @@
 
     <main class="main">
         <!-- Hero Section -->
-        <section class="hero" id="accueil">
-            <div class="hero__background"></div>
-            <div class="container hero__container">
-                <div class="hero__content">
-                    <h1 class="hero__title">
-                        Conduis avec confiance.<span style="color: yellow;margin-left: 10px;margin-right: 10px;">—</span>Réussis avec MND !<br>
-                        <span class="hero__title--highlight">plus vite</span>
-                    </h1>
-                    <p class="hero__subtitle">
-                        Auto-école moderne avec piste privée • Moniteurs diplômés • Faible temps d'attente
-                    </p>
-                    <div class="hero__buttons">
-                        <a href="formules.html" class="btn btn--primary">
-                            <span>Voir les formules</span>
-                            <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a href="inscription.html" class="btn btn--secondary">S'inscrire maintenant</a>
-                    </div>
-                </div>
-                <div class="hero__image">
-                    <img src="./images/voiture.svg" class="voiture" alt="">
-
-                </div>
+        <!-- Hero Section -->
+<section class="hero" id="accueil">
+    <div class="hero__background"></div>
+    <div class="container hero__container">
+        <!-- Contenu gauche : Texte -->
+        <div class="hero__content">
+            <h1 class="hero__title">
+                Conduis avec confiance.<br>
+                <span class="hero__title--highlight">Réussis avec MND !</span>
+            </h1>
+            <p class="hero__subtitle">
+                Piste privée · Moniteurs diplômés · Faible temps d'attente
+            </p>
+            
+            <!-- Badge étoile -->
+            <div class="hero__badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#F5C400">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <span style="font-family: 'TTCommons';">Taux de réussite élevé</span>
             </div>
             
-        </section>
+            <div class="hero__buttons">
+                <a href="formules.html" class="btn btn--primary">
+                    <span>Voir les formules</span>
+                    <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="inscription.html" class="btn btn--secondary">S'inscrire maintenant</a>
+            </div>
+            
+            <p class="hero__info">
+                Besoin d'infos ? <a href="contact.html" class="hero__link">Contactez-nous</a>
+            </p>
+        </div>
+        
+        <!-- Contenu droite : Images -->
+        <div class="hero__images">
+            <!-- Badge "300 élèves formés" en haut à droite -->
+            <img src="./images/Layer_1.png" class="hero__badge-top" alt="300 élèves formés">
+            
+            <img src="./images/voiture.png" alt="Voiture MND Permis" class="hero__car" style="z-index: 10;position:absolute;">
+                
+            <!-- Plateforme noire en bas -->
+            <img src="./images/Group 15 (1).png" class="plat" alt="">
+        </div>
+    </div>
+</section>
 
         <!-- Promotions Moto Section -->
         <section class="promo" id="promo-moto">
