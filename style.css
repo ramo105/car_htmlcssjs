@@ -4297,6 +4297,7 @@ button {
     .hero, #accueil {
         min-height: 750px !important;
         padding: 100px 0 50px !important;
+        margin-top: 10px;
     }
     
     .hero__container {
