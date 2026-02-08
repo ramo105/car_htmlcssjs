@@ -1,0 +1,108 @@
+/* ========================================
+   PAGE INFORMATIONS UTILES - SIMPLE & COMPACT
+   ======================================== */
+
+/* Hero Section */
+.info-hero {
+    padding: 8rem 0 3rem;
+    background: #0F1216;
+}
+
+.info-hero__content {
+    text-align: center;
+}
+
+.info-hero__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.info-hero__subtitle {
+    font-size: 1.125rem;
+    color: #B0B7C3;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Content principal - SIMPLE */
+.info-content {
+    padding: 3rem 0;
+    background: #0F1216;
+}
+
+/* Titre de section - SIMPLE */
+.info-section__title {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 0.75rem;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.info-section__title:first-child {
+    margin-top: 0;
+}
+
+/* Lien PDF - SIMPLE */
+.info-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #3B82F6;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.info-link:hover {
+    color: #F5C400;
+    text-decoration: underline;
+}
+
+.info-link svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Texte descriptif */
+.info-text {
+    color: #B0B7C3;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+/* Liste de liens */
+.info-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Petit espace entre sections */
+.info-section {
+    margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .info-hero {
+        padding: 6rem 0 2rem;
+    }
+
+    .info-hero__title {
+        font-size: 2.5rem;
+    }
+
+    .info-content {
+        padding: 2rem 0;
+    }
+
+    .info-section__title {
+        font-size: 1.25rem;
+    }
+}

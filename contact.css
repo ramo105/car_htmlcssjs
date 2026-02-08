@@ -299,11 +299,8 @@
     cursor: pointer;
 }
 .form__select option{
-<<<<<<< HEAD
+
     background-color: #1A9FDA;
-=======
-    background-color: #3B82F6;
->>>>>>> f2df8b6 (update)
 }
 .form__textarea {
     resize: vertical;

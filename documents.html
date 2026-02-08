@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documents à fournir - MND Permis : Liste complète des pièces justificatives nécessaires">
+    <title>Documents à fournir - MND Permis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="documents.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <img src="images/logo.png" onclick="window.location.href = 'index.html'" alt="MND Permis Logo" class="nav__logo-img">
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="formules.html" class="nav__link">Formules</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="financement.html" class="nav__link">Financement</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#avis" class="nav__link">Avis</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                    
+                    <!-- DROPDOWN ESPACE ÉLÈVE -->
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="#" class="nav__link nav__link--dropdown">
+                            Espace Élève
+                            <svg class="nav__dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        
+                        <ul class="nav__dropdown">
+                            <li class="nav__dropdown-item">
+                                <a href="documents.html" class="nav__dropdown-link active">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                    Documents à fournir
+                                </a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="informations.html" class="nav__dropdown-link">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 16v-4M12 8h.01"/>
+                                    </svg>
+                                    Informations utiles
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav__item">
+                        <a href="https://klaxo.fr" target="_blank" class="nav__link nav__link--external">
+                            Klaxo
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px;">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav__cta">
+                <a href="contact.html" class="btn btn--outline btn--small">Contactez nous</a>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Section Documents avec background bleu -->
+        <section class="documents-section">
+            <div class="container">
+                <!-- Titre avec background bleu ciel -->
+                <div class="documents-header">
+                    <h1 class="documents-title">Documents à fournir</h1>
+                </div>
+
+                <!-- Grille 3x3 des documents -->
+                <div class="documents-grid">
+                    
+                    <!-- Document 1 : E-PHOTO -->
+                    <div class="document-card">
+                        <div class="document-card__image">
+                            <img src="images/ephoto.png" alt="E-photo d'identité">
+                        </div>
+                        <h3 class="document-card__title">E-PHOTO D'IDENTITÉ<br>DE MOINS DE 6 MOIS</h3>
+                        <p class="document-card__text">Photo-Signatures Numériques<br>Agréé ANTS.</p>
+                    </div>
+
+                    <!-- Document 2 : PIÈCE D'IDENTITÉ -->
+                    <div class="document-card">
+                        <div class="document-card__image">
+                            <img src="images/documents/piece-identite.png" alt="Pièce d'identité">
+                        </div>
+                        <h3 class="document-card__title">VOTRE<br>PIÈCE D'IDENTITÉ</h3>
+                        <p class="document-card__text">en cours de validité.</p>
+                    </div>
+
+                    <!-- Document 3 : JUSTIFICATIF DE DOMICILE -->
+                    <div class="document-card">
+                        <div class="document-card__image">
+                            <img src="images/documents/justificatif-domicile.png" alt="Justificatif de domicile">
+                        </div>
+                        <h3 class="document-card__title">UN JUSTIFICATIF<br>DE DOMICILE DE MOINS DE 3 MOIS</h3>
+                        <p class="document-card__text">ATTESTATION D'HÉBERGEMENT +<br>la pièce d'identité de l'hébergeur</p>
+                    </div>
+
+                    <!-- Document 4 : JOURNÉE DÉFENSE -->
+                    <div class="document-card">
+                        <div class="document-card__image">
+                            <img src="images/documents/jdc.png" alt="Journée Défense et Citoyenneté">
+                        </div>
+                        <h3 class="document-card__title">JOURNÉE DÉFENSE &<br>CITOYENNETÉ</h3>
+                        <p class="document-card__text">Pour ceux âgés de 17 à 24 ans inclus.<br>Ou Attestation provisoire en instance de<br>convocation à la JDC</p>
+                        <p class="document-card__subtitle">ATTESTATION<br>DE RECENSEMENT</p>
+                        <p class="document-card__subtext">pour les candidats âgés de 16 ans.</p>
+                    </div>
+
+                    <!-- Document 5 : ASSR NIVEAU 2 -->
+                    <div class="document-card">
+                        <div class="document-card__image">
+                            <img src="images/documents/assr.png" alt="ASSR Niveau 2">
+                        </div>
+                        <h3 class="document-card__title">L'ASSR NIVEAU 2<br>OU L'ASR</h3>
+                        <p class="document-card__text">pour les candidats âgés de moins de 21 ans<br>Ce document est indispensable<br>pour la délivrance du permis de conduire.</p>
+                    </div>
+
+                    <!-- Document 6 : 2 LETTRES SUIVIES -->
+                    <div class="document-card">
+                        <div class="document-card__image">
+                            <img src="images/documents/lettres-suivies.png" alt="2 lettres suivies">
+                        </div>
+                        <h3 class="document-card__title">2 LETTRES SUIVIES AS<br>PRÊT À POSTER<br>50G</h3>
+                    </div>
+
+                    <!-- Document 7 : PIÈCE D'IDENTITÉ TUTEUR -->
+                    <div class="document-card">
+                        <div class="document-card__image">
+                            <img src="images/documents/piece-identite-tuteur.png" alt="Pièce d'identité tuteur">
+                        </div>
+                        <h3 class="document-card__title">LA PIÈCE D'IDENTITÉ<br>D'UN TUTEUR.</h3>
+                        <p class="document-card__text">Valable pour les mineurs uniquement.<br>La présence d'un des parents ou tuteur<br>est indispensable lors de l'inscription</p>
+                    </div>
+
+                    <!-- Document 8 : VOTRE PERMIS -->
+                    <div class="document-card">
+                        <div class="document-card__image">
+                            <img src="images/documents/permis-conduire.png" alt="Permis de conduire">
+                        </div>
+                        <h3 class="document-card__title">VOTRE PERMIS<br>DE CONDUIRE</h3>
+                        <p class="document-card__text">Valable uniquement pour les<br>candidats possédant déjà<br>un permis de conduire.</p>
+                    </div>
+
+                    <!-- Document 9 : RÉSULTAT CODE -->
+                    <div class="document-card">
+                        <div class="document-card__image">
+                            <img src="images/documents/code.png" alt="Résultat code">
+                        </div>
+                        <h3 class="document-card__title">RÉSULTAT DE<br>L'EXAMEN THÉORIQUE</h3>
+                        <p class="document-card__text">en cours de validité.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__logo">
+                        <img src="images/logo.png" alt="MND Permis" class="footer__logo-img">
+                    </div>
+                    <p class="footer__desc">Votre auto-école de confiance pour l'obtention de votre permis de conduire.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Navigation</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="formules.html">Formules</a></li>
+                        <li><a href="financement.html">Financement</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="espace-eleve.html">Espace Élève</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Nos Permis</h4>
+                    <ul class="footer__links">
+                        <li><a href="formules.html#permis-b">Permis B (Manuelle)</a></li>
+                        <li><a href="formules.html#permis-b78">Permis B78 (Auto)</a></li>
+                        <li><a href="formules.html#aac">AAC / Conduite Supervisée</a></li>
+                        <li><a href="formules.html#moto">Permis Moto A2</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__contact">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <a href="tel:+212600000000">+212 6 00 00 00 00</a>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <a href="mailto:mndpermis@gmail.com">mndpermis@gmail.com</a>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Paris, France</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <span>•</span>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                    <span>•</span>
+                    <a href="rgpd.html">RGPD</a>
+                </div>
+                <p class="footer__copyright">© 2026 MND Permis. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

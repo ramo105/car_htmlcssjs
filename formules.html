@@ -26,24 +26,67 @@
                 
             </div>
             
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="index.html" class="nav__link active">Accueil</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="formules.html" class="nav__link">Formules</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="formules.html#financement" class="nav__link">Financement</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contact.html" class="nav__link">Contact</a>
-                    </li>
-                   
-                </ul>
-                
-            </div>
+           <div class="nav__menu" id="nav-menu">
+    <div class="nav__menu" id="nav-menu">
+    <ul class="nav__list">
+        <li class="nav__item">
+            <a href="index.html" class="nav__link">Accueil</a>
+        </li>
+        <li class="nav__item">
+            <a href="formules.html" class="nav__link">Formules</a>
+        </li>
+        <li class="nav__item">
+            <a href="financement.html" class="nav__link">Financement</a>
+        </li>
+        <li class="nav__item">
+            <a href="index.html#avis" class="nav__link">Avis</a>
+        </li>
+        <li class="nav__item">
+            <a href="contact.html" class="nav__link">Contact</a>
+        </li>
+        
+        <!-- 🎯 DROPDOWN ESPACE ÉLÈVE -->
+        <li class="nav__item nav__item--dropdown">
+            <a href="#" class="nav__link nav__link--dropdown">
+                Espace Élève
+                <svg class="nav__dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+            
+            <!-- Sous-menu dropdown -->
+            <ul class="nav__dropdown">
+                <li class="nav__dropdown-item">
+                    <a href="documents.html" class="nav__dropdown-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        Documents à fournir
+                    </a>
+                </li>
+                <li class="nav__dropdown-item">
+                    <a href="informations.html" class="nav__dropdown-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        Informations utiles
+                    </a>
+                </li>
+            </ul>
+        </li>
+        
+        <li class="nav__item">
+            <a href="https://klaxo.fr" target="_blank" class="nav__link nav__link--external">
+                Klaxo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px;">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
             
             <div class="nav__cta">
                 <a href="contact.html" class="btn btn--outline btn--small">Contactez nous</a>
@@ -67,12 +110,11 @@
                     
                     <!-- Navigation rapide -->
                     <div class="formules-hero__nav">
-                        <a href="#permis-b" class="formules-hero__link">Permis B</a>
-                        <a href="#permis-b78" class="formules-hero__link">Permis B78</a>
-                        <a href="#aac" class="formules-hero__link">AAC/CS</a>
-                        <a href="#moto" class="formules-hero__link">Permis Moto</a>
-                        <a href="#financement" class="formules-hero__link">Financement</a>
-                    </div>
+    <a href="#permis-b" class="formules-hero__link">Permis B</a>
+    <a href="#permis-b78" class="formules-hero__link">Permis B78</a>
+    <a href="#aac" class="formules-hero__link">AAC/CS</a>
+    <a href="#moto" class="formules-hero__link">Permis Moto</a>
+</div>
                 </div>
             </div>
         </section>
@@ -387,142 +429,33 @@
                         <a href="inscription.html" class="btn btn--outline">S'inscrire</a>
                     </div>
                 </div>
-
-                <!-- Prix standards (sans promo) - Commenté pour référence -->
-                <!-- 
-                <div class="formules-grid">
-                    <div class="formule-card">
-                        <h3>A2 Manuelle</h3>
-                        <div class="price">1290 €</div>
-                        <p>20 heures</p>
-                    </div>
-                    <div class="formule-card">
-                        <h3>A2 Automatique</h3>
-                        <div class="price">1150 €</div>
-                        <p>14 heures</p>
-                    </div>
-                </div>
-                -->
             </div>
         </section>
 
-        <!-- Forfaits et Tarifs -->
-        <section class="formules-pricing">
-            <div class="container">
-                <div class="formules-section__header">
-                    <h2 class="section__title">Forfaits & Tarifs</h2>
-                    <p class="section__subtitle">Options et tarifs complémentaires</p>
-                </div>
+      
 
-                <div class="pricing-table">
-                    <div class="pricing-table__row">
-                        <span class="pricing-table__item">Heure de conduite supplémentaire</span>
-                        <span class="pricing-table__price">150 €</span>
-                    </div>
-                    <div class="pricing-table__row">
-                        <span class="pricing-table__item">Forfait 10 heures</span>
-                        <span class="pricing-table__price">1400 €</span>
-                    </div>
-                    <div class="pricing-table__row">
-                        <span class="pricing-table__item">Présentation examen pratique</span>
-                        <span class="pricing-table__price">300 €</span>
-                    </div>
-                    <div class="pricing-table__row">
-                        <span class="pricing-table__item">Présentation code (après échec)</span>
-                        <span class="pricing-table__price">200 €</span>
-                    </div>
-                    <div class="pricing-table__row">
-                        <span class="pricing-table__item">Cours de code (accès 6 mois)</span>
-                        <span class="pricing-table__price">400 €</span>
-                    </div>
-                    <div class="pricing-table__row">
-                        <span class="pricing-table__item">Dossier administratif seul</span>
-                        <span class="pricing-table__price">500 €</span>
-                    </div>
-                </div>
-
-                <div class="pricing-note">
+        <!-- CTA Financement -->
+<section class="formules-financement-cta">
+    <div class="container">
+        <div class="financement-cta__content">
+            <div class="financement-cta__icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+            </div>
+            <h2 class="financement-cta__title">Besoin d'aide pour financer votre permis ?</h2>
+            <p class="financement-cta__text">Découvrez toutes nos solutions de financement : CPF, Région Île-de-France, Apprentis, Paiement échelonné...</p>
+            <div class="financement-cta__buttons">
+                <a href="financement.html" class="btn btn--primary btn--large">
+                    Voir les financements
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="12" y1="16" x2="12" y2="12"/>
-                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                        <path d="M5 12h14m0 0l-7-7m7 7l-7 7"/>
                     </svg>
-                    <p><strong>Moyens de paiement acceptés :</strong> Carte bancaire et espèces uniquement</p>
-                </div>
+                </a>
             </div>
-        </section>
-
-        <!-- Section Financement -->
-        <section class="formules-financement" id="financement">
-            <div class="container">
-                <div class="formules-section__header">
-                    <h2 class="section__title">Financement</h2>
-                    <p class="section__subtitle">Plusieurs solutions pour financer votre permis</p>
-                </div>
-
-                <div class="financement-grid">
-                    <!-- CPF -->
-                    <div class="financement-card">
-                        <div class="financement-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                            </svg>
-                        </div>
-                        <h3 class="financement-card__title">Compte Personnel de Formation (CPF)</h3>
-                        <p class="financement-card__text">Le CPF permet de financer tout ou partie de votre formation au permis de conduire. Vérifiez vos droits sur le site officiel Mon Compte Formation et utilisez votre crédit pour réduire le coût de votre permis.</p>
-                        <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener" class="financement-card__link">
-                            <span>Vérifier mes droits CPF</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Permis à 1€ -->
-                    <div class="financement-card">
-                        <div class="financement-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M9 21V9"/>
-                            </svg>
-                        </div>
-                        <h3 class="financement-card__title">Permis à 1€ par jour</h3>
-                        <p class="financement-card__text">Pour les jeunes de 15 à 25 ans, le permis à 1€ par jour est un prêt à taux zéro pour financer votre formation. Remboursez seulement 30€ par mois sans intérêts.</p>
-                        <a href="https://www.service-public.fr/particuliers/vosdroits/F2686" target="_blank" rel="noopener" class="financement-card__link">
-                            <span>En savoir plus</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Aides Alternants -->
-                    <div class="financement-card">
-                        <div class="financement-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 14l9-5-9-5-9 5 9 5z"/>
-                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-                            </svg>
-                        </div>
-                        <h3 class="financement-card__title">Aide au permis pour les apprentis</h3>
-                        <p class="financement-card__text">Si vous êtes apprenti(e), vous pouvez bénéficier d'une aide de 500€ pour financer votre permis de conduire B. Renseignez-vous auprès de votre CFA (Centre de Formation d'Apprentis) pour en bénéficier.</p>
-                        <div class="financement-card__note">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <line x1="12" y1="16" x2="12" y2="12"/>
-                                <line x1="12" y1="8" x2="12.01" y2="8"/>
-                            </svg>
-                            <span>À voir avec votre CFA</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="financement-cta">
-                    <p class="financement-cta__text">Besoin d'aide pour choisir votre financement ?</p>
-                    <a href="contact.html" class="btn btn--primary btn--large">Contactez-nous</a>
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
+</section>
     </main>
 
     <!-- Footer -->
@@ -553,9 +486,9 @@
                     <ul class="footer__links">
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="formules.html">Formules</a></li>
-                        <li><a href="#financement">Financement</a></li>
+                        <li><a href="financement.html">Financement</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="inscription.html">S'inscrire</a></li>
+                        <li><a href="espace-eleve.html">Espace Élève</a></li>
                     </ul>
                 </div>
 

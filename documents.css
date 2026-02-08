@@ -1,0 +1,207 @@
+/* ========================================
+   PAGE DOCUMENTS À FOURNIR
+   ======================================== */
+
+/* Section principale avec background bleu */
+.documents-section {
+    min-height: calc(100vh - 80px);
+    padding: 8rem 0 4rem;
+    background-image: url('images/FOND-BLEU-DEPLIANT_Plan-de-travail-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Fallback si l'image ne charge pas */
+.documents-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+    z-index: -1;
+}
+
+/* Header avec background bleu ciel */
+.documents-header {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);
+     max-width: 1000px;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.documents-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #FFFFFF;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Grille 3x3 */
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Carte document */
+.document-card {
+    background: none;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.document-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Image du document */
+.document-card__image {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.document-card__image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Titre du document */
+.document-card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+/* Texte descriptif */
+.document-card__text {
+    font-size: 0.875rem;
+    color:white;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+/* Sous-titre */
+.document-card__subtitle {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* Sous-texte */
+.document-card__subtext {
+    font-size: 0.8125rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+/* Responsive Tablet */
+@media (max-width: 1024px) {
+    .documents-section {
+        padding: 6rem 0 3rem;
+    }
+
+    .documents-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .documents-header {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .documents-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .documents-section {
+        padding: 5rem 0 2rem;
+        background-attachment: scroll;
+    }
+
+    .documents-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .documents-header {
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .documents-title {
+        font-size: 2rem;
+    }
+
+    .document-card {
+        padding: 1.25rem;
+    }
+
+    .document-card__image {
+        height: 150px;
+    }
+
+    .document-card__title {
+        font-size: 0.9375rem;
+    }
+
+    .document-card__text {
+        font-size: 0.8125rem;
+    }
+}
+
+/* Responsive Petit Mobile */
+@media (max-width: 480px) {
+    .documents-section {
+        padding: 4rem 0 1.5rem;
+    }
+
+    .documents-title {
+        font-size: 1.75rem;
+    }
+
+    .document-card {
+        padding: 1rem;
+    }
+
+    .document-card__image {
+        height: 130px;
+    }
+
+    .document-card__title {
+        font-size: 0.875rem;
+    }
+}

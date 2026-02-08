@@ -9,11 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" href="./images/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,31 +17,68 @@
     <header class="header" id="header">
         <nav class="nav container">
             <div class="nav__logo">
-                <img src="images/logo.png" onclick="addEventListener('click',function(){
-                    window.location.href = 'index.html'
-                })" alt="MND Permis Logo" class="nav__logo-img">
-                
+                <img src="images/logo.png" onclick="window.location.href = 'index.html'" alt="MND Permis Logo" class="nav__logo-img">
             </div>
             
             <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="index.html" class="nav__link active">Accueil</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="formules.html" class="nav__link">Formules</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="formules.html#financement" class="nav__link">Financement</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contact.html" class="nav__link">Contact</a>
-                    </li>
-                   
-                </ul>
-                
-            </div>
+    <ul class="nav__list">
+        <li class="nav__item">
+            <a href="index.html" class="nav__link">Accueil</a>
+        </li>
+        <li class="nav__item">
+            <a href="formules.html" class="nav__link">Formules</a>
+        </li>
+        <li class="nav__item">
+            <a href="financement.html" class="nav__link">Financement</a>
+        </li>
+        <li class="nav__item">
+            <a href="#avis" class="nav__link">Avis</a>
+        </li>
+        <li class="nav__item">
+            <a href="contact.html" class="nav__link">Contact</a>
+        </li>
+        
+        <!-- 🎯 DROPDOWN ESPACE ÉLÈVE -->
+        <li class="nav__item nav__item--dropdown">
+            <a href="#" class="nav__link nav__link--dropdown">
+                Espace Élève
+                <svg class="nav__dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
             
+            <!-- Sous-menu dropdown -->
+            <ul class="nav__dropdown">
+                <li class="nav__dropdown-item">
+                    <a href="documents.html" class="nav__dropdown-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        Documents à fournir
+                    </a>
+                </li>
+                <li class="nav__dropdown-item">
+                    <a href="informations.html" class="nav__dropdown-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        Informations utiles
+                    </a>
+                </li>
+            </ul>
+        </li>
+        
+        <li class="nav__item">
+            <a href="https://klaxo.fr" target="_blank" class="nav__link nav__link--external">
+                Klaxo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px;">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div>
             <div class="nav__cta">
                 <a href="contact.html" class="btn btn--outline btn--small">Contactez nous</a>
             </div>
@@ -60,55 +93,51 @@
 
     <main class="main">
         <!-- Hero Section -->
-        <!-- Hero Section -->
-<section class="hero" id="accueil">
-    <div class="hero__background"></div>
-    <div class="container hero__container">
-        <!-- Contenu gauche : Texte -->
-        <div class="hero__content">
-            <h1 class="hero__title">
-                Conduis avec confiance.<br>
-                <span class="hero__title--highlight">Réussis avec MND !</span>
-            </h1>
-            <p class="hero__subtitle">
-                Piste privée · Moniteurs diplômés · Faible temps d'attente
-            </p>
-            
-            <!-- Badge étoile -->
-            <div class="hero__badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#F5C400">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <span style="font-family: 'TTCommons';">Taux de réussite élevé</span>
-            </div>
-            
-            <div class="hero__buttons">
-                <a href="formules.html" class="btn btn--primary">
-                    <span>Voir les formules</span>
-                    <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-                <a href="inscription.html" class="btn btn--secondary">S'inscrire maintenant</a>
-            </div>
-            
-            <p class="hero__info">
-                Besoin d'infos ? <a href="contact.html" class="hero__link">Contactez-nous</a>
-            </p>
-        </div>
-        
-        <!-- Contenu droite : Images -->
-        <div class="hero__images">
-            <!-- Badge "300 élèves formés" en haut à droite -->
-            <img src="./images/Layer_1.png" class="hero__badge-top" alt="300 élèves formés">
-            
-            <img src="./images/voiture.png" alt="Voiture MND Permis" class="hero__car" style="z-index: 10;position:absolute;">
+        <section class="hero" id="accueil">
+            <div class="hero__background"></div>
+            <div class="container hero__container">
+                <!-- Contenu gauche : Texte -->
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Conduis avec confiance.<br>
+                        <span class="hero__title--highlight">Réussis avec MND !</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Piste privée · Moniteurs diplômés · Faible temps d'attente
+                    </p>
+                    
+                    <!-- Badge étoile -->
+                    <div class="hero__badge">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#F5C400">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span style="font-family: 'TTCommons';">Taux de réussite élevé</span>
+                    </div>
+                    
+                    <div class="hero__buttons">
+                        <a href="formules.html" class="btn btn--primary">
+                            <span>Voir les formules</span>
+                            <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="inscription.html" class="btn btn--secondary">S'inscrire maintenant</a>
+                    </div>
+                    
+                    <p class="hero__info">
+                        Besoin d'infos ? <a href="contact.html" class="hero__link">Contactez-nous</a>
+                    </p>
+                </div>
                 
-        </div>
-    </div>
-</section>
+                <!-- Contenu droite : Images -->
+                <div class="hero__images">
+                    <img src="./images/Layer_1.png" class="hero__badge-top" alt="300 élèves formés">
+                    <img src="./images/voiture.png" alt="Voiture MND Permis" class="hero__car" style="z-index: 10;position:absolute;">
+                </div>
+            </div>
+        </section>
 
-        <!-- Promotions Moto Section -->
+        <!-- Promotions Moto Section - EN HAUT -->
         <section class="promo" id="promo-moto">
             <div class="container">
                 <div class="promo__header">
@@ -165,17 +194,124 @@
             </div>
         </section>
 
-        <!-- Présentation Section -->
-        <!-- Section À Propos - Timeline Professionnelle -->
+        <!-- NOUVELLE SECTION : Permis Voiture & Moto -->
+        <section class="permis-types">
+            <div class="container">
+                <div class="permis-types__header">
+                    <h2 class="section__title section__title--center">Nos Formations</h2>
+                    <p class="section__subtitle section__subtitle--center">Permis voiture et moto adaptés à vos besoins</p>
+                </div>
+                
+                <div class="permis-types__grid">
+                    <!-- Permis Voiture -->
+                    <div class="permis-type__card permis-type__card--voiture">
+                        <div class="permis-type__icon">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="1" y="3" width="15" height="13"/>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="permis-type__title">Permis Voiture</h3>
+                        <p class="permis-type__text">Formation complète pour permis B (manuelle), B78 (automatique), AAC et conduite supervisée</p>
+                        <ul class="permis-type__list">
+                            <li>✓ Permis B - Boîte Manuelle</li>
+                            <li>✓ Permis B78 - Boîte Automatique</li>
+                            <li>✓ AAC dès 15 ans</li>
+                            <li>✓ Formation accélérée disponible</li>
+                        </ul>
+                        <a href="formules.html#permis-b" class="btn btn--primary">Découvrir les formules</a>
+                    </div>
+
+                    <!-- Permis Moto -->
+                    <div class="permis-type__card permis-type__card--moto">
+                        <div class="permis-type__badge">PROMO EN COURS</div>
+                        <div class="permis-type__icon permis-type__icon--yellow">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM12 5l3 4h4l-3-4zM5 15l3-4 4 4M19 15l-4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="permis-type__title">Permis Moto</h3>
+                        <p class="permis-type__text">Formation A2 manuelle et automatique avec piste privée. Offres promotionnelles disponibles !</p>
+                        <ul class="permis-type__list">
+                            <li>✓ A2 Manuelle - 990€ (Promo)</li>
+                            <li>✓ A2 Automatique - 990€ (Promo)</li>
+                            <li>✓ Passerelle A2 → A</li>
+                            <li>✓ Piste privée exclusive</li>
+                        </ul>
+                        <a href="formules.html#moto" class="btn btn--secondary">Voir les promos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOUVELLE SECTION : Logos Financement Cliquables -->
+        <section class="financement-logos">
+            <div class="container">
+                <h2 class="section__title section__title--center">Nos Solutions de Financement</h2>
+                <p class="section__subtitle section__subtitle--center">Plusieurs options pour financer votre permis</p>
+                
+                <div class="financement-logos__grid">
+                    <a href="financement.html#cpf" class="financement-logo__card">
+                        <div class="financement-logo__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3 class="financement-logo__title">CPF</h3>
+                        <p class="financement-logo__text">Compte Personnel Formation</p>
+                    </a>
+
+                    <a href="financement.html#idf" class="financement-logo__card financement-logo__card--featured">
+                        <div class="financement-logo__badge">1 300€</div>
+                        <div class="financement-logo__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <circle cx="12" cy="11" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="financement-logo__title">Région IDF</h3>
+                        <p class="financement-logo__text">Aide Île-de-France</p>
+                    </a>
+
+                    <a href="financement.html#apprentis" class="financement-logo__card">
+                        <div class="financement-logo__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                            </svg>
+                        </div>
+                        <h3 class="financement-logo__title">Apprentis</h3>
+                        <p class="financement-logo__text">Aide de 500€</p>
+                    </a>
+
+                    <a href="financement.html#paiement" class="financement-logo__card">
+                        <div class="financement-logo__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18M9 21V9"/>
+                            </svg>
+                        </div>
+                        <h3 class="financement-logo__title">Paiement</h3>
+                        <p class="financement-logo__text">2x ou 3x sans frais</p>
+                    </a>
+                </div>
+
+                <div class="financement-logos__cta">
+                    <a href="financement.html" class="btn btn--outline btn--large">Voir toutes les solutions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section À Propos - Timeline (GARDER L'EXISTANT) -->
         <section class="about">
             <div class="container">
-                <!-- Header -->
                 <div class="about__header">
                     <h2 class="section__title">Notre Histoire</h2>
                     <p class="section__subtitle">Une passion pour l'enseignement de la conduite depuis plus de 10 ans</p>
                 </div>
 
-                <!-- Timeline -->
                 <div class="about__timeline">
                     <!-- Étape 1 - Fondation -->
                     <div class="timeline__item timeline__item--left">
@@ -320,7 +456,7 @@
             </div>
         </section>
 
-        <!-- Avantages Section -->
+        <!-- Avantages Section (GARDER L'EXISTANT) -->
         <section class="advantages">
             <div class="container">
                 <h2 class="section__title section__title--center">Nos Avantages</h2>
@@ -392,7 +528,7 @@
             </div>
         </section>
 
-        <!-- Horaires Section -->
+        <!-- Horaires Section (GARDER L'EXISTANT) -->
         <section class="hours">
             <div class="container">
                 <div class="hours__grid">
@@ -443,11 +579,10 @@
             </div>
         </section>
 
-        <!-- Avis Google Section -->
-        <!-- Section Avis Google - Design Professionnel -->
-        <section class="reviews">
+        <!-- Avis Google Section - AJOUT ID="avis" -->
+        <section class="reviews" id="avis">
             <div class="container">
-                <!-- Header avec logo Google -->
+                <!-- Header avec Google Badge -->
                 <div class="reviews__header">
                     <div class="reviews__google-badge">
                         <svg class="reviews__google-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -682,7 +817,7 @@
             </div>
         </section>
 
-        <!-- CTA Final Section -->
+        <!-- CTA Final Section (GARDER L'EXISTANT) -->
         <section class="cta-final">
             <div class="container">
                 <div class="cta-final__content">
@@ -722,7 +857,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (GARDER L'EXISTANT avec modifications navigation) -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -748,11 +883,11 @@
                 <div class="footer__col">
                     <h4 class="footer__title">Navigation</h4>
                     <ul class="footer__links">
-                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="index.html">Accueil</a></li>
                         <li><a href="formules.html">Formules</a></li>
-                        <li><a href="formules.html#financement">Financement</a></li>
+                        <li><a href="financement.html">Financement</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="inscription.html">S'inscrire</a></li>
+                        <li><a href="espace-eleve.html">Espace Élève</a></li>
                     </ul>
                 </div>
 

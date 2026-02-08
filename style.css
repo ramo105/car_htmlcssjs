@@ -326,6 +326,232 @@ button {
     border-radius: var(--radius-md);
     font-weight: 700;
 }
+.nav__item--dropdown {
+    position: relative;
+}
+
+/* Lien avec dropdown */
+.nav__link--dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+}
+
+/* Icône flèche */
+.nav__dropdown-icon {
+    transition: transform 0.3s ease;
+    margin-top: 2px;
+}
+
+.nav__item--dropdown:hover .nav__dropdown-icon,
+.nav__item--dropdown.active .nav__dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Sous-menu dropdown */
+.nav__dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 240px;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    padding: 0.75rem 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    list-style: none;
+}
+
+/* Zone invisible pour garder le hover actif entre le lien et le dropdown */
+.nav__dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+/* Petit triangle au-dessus du dropdown */
+.nav__dropdown::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Afficher le dropdown au hover */
+.nav__item--dropdown:hover .nav__dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    top: calc(100% + 10px);
+}
+
+/* Items du dropdown */
+.nav__dropdown-item {
+    margin: 0;
+}
+
+/* Liens du dropdown */
+.nav__dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav__dropdown-link svg {
+    color: #3B82F6;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+/* Hover sur les liens du dropdown */
+.nav__dropdown-link:hover {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3B82F6;
+    padding-left: 2rem;
+}
+
+.nav__dropdown-link:hover svg {
+    color: #F5C400;
+    transform: scale(1.1);
+}
+
+/* Séparateur entre les items */
+.nav__dropdown-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================
+   DROPDOWN - MOBILE (< 1100px)
+   ======================================== */
+
+@media (max-width: 1100px) {
+    /* Réinitialiser le positionnement */
+    .nav__item--dropdown {
+        position: static;
+    }
+    
+    .nav__link--dropdown {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1.5rem 0 !important;
+    }
+    
+    /* Dropdown en bloc sous le lien parent */
+    .nav__dropdown {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        min-width: 100%;
+        background: rgba(59, 130, 246, 0.05);
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    
+    /* Supprimer le triangle */
+    .nav__dropdown::before {
+        display: none;
+    }
+    
+    /* Quand le dropdown est actif */
+    .nav__item--dropdown.active .nav__dropdown {
+        max-height: 300px;
+        padding: 0.5rem 0;
+        border-top: 1px solid rgba(59, 130, 246, 0.2);
+        border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    
+    /* Items mobile */
+    .nav__dropdown-item {
+        border-bottom: none !important;
+    }
+    
+    /* Liens mobile */
+    .nav__dropdown-link {
+        padding: 1rem 0 1rem 2rem !important;
+        font-size: 1rem !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+    
+    .nav__dropdown-link:hover {
+        background: transparent !important;
+        color: #3B82F6 !important;
+        padding-left: 2.5rem !important;
+    }
+    
+    /* Icône flèche mobile */
+    .nav__dropdown-icon {
+        margin-right: 0.5rem;
+    }
+}
+
+/* ========================================
+   ANIMATIONS SUPPLÉMENTAIRES
+   ======================================== */
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Animation d'entrée smooth */
+.nav__item--dropdown:hover .nav__dropdown {
+    animation: slideDown 0.3s ease;
+}
+@media (max-width: 768px) {
+    .nav__dropdown-link {
+        font-size: 0.9375rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav__dropdown-link {
+        padding: 0.875rem 0 0.875rem 1.5rem !important;
+        font-size: 0.875rem !important;
+    }
+    
+    .nav__dropdown-link svg {
+        width: 16px;
+        height: 16px;
+    }
+}
 .link{
     color: var(--color-white);
     padding: 0.75rem 1.5rem;
@@ -2766,18 +2992,72 @@ button {
    RESPONSIVE NAVIGATION
    ======================================== */
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
+    /* Activer le hamburger */
+    .nav__toggle {
+        display: flex !important;
+    }
+    
+    /* Cacher le menu desktop */
+    .nav__menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(10px);
+        padding: var(--spacing-lg);
+        transition: left var(--transition-medium);
+        border-top: 1px solid rgba(59, 130, 246, 0.2);
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+    
+    .nav__menu.active {
+        left: 0;
+        justify-content: center;
+    }
+    
     .nav__list {
-        gap: 1.5rem;
+        flex-direction: column;
+        gap:3rem !important;
     }
     
+    .nav__link {
+        font-size: 1.1rem;
+        padding: 0.75rem 0;
+    }
+    
+    /* Cacher le bouton CTA sur tablette */
     .nav__cta {
-        gap: 0.75rem;
+        display: none;
+    }
+    .nav__list .active{
+        font-size: 2rem;
+    }
+    .nav__link{
+        font-size: 2rem;
+    }
+}
+
+.plat{
+    position: absolute;
+    top:50%;
+    z-index: 0;
+}
+
+@media (max-width: 480px) {
+    .nav__logo-img {
+        height: 40px;
     }
     
-    .btn--small {
-        padding: 0.5rem 1rem;
-        font-size: 0.875rem;
+    .nav__menu {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .nav__link {
+        font-size: 1rem;
     }
 }
 .plat{
@@ -2785,15 +3065,7 @@ button {
     top:50%;
     z-index: 0;
 }
-@media (max-width: 480px) {
-    .nav__logo-img {
-        height: 40px;
-    }
-    
-    .nav__menu {
-        width: 90%;
-    }
-}
+
 /* ========================================
    TIMELINE ABOUT - CORRECTIONS RESPONSIVE
    ======================================== */
@@ -4477,4 +4749,501 @@ button {
 /* VOITURE EN BAS ⬇️ */
 .hero__images {
     order: 2; /* Pas de -1 ! */
+}
+/* ========================================
+   NOUVEAUX STYLES À AJOUTER À LA FIN DE STYLE.CSS
+   POUR LES NOUVELLES SECTIONS
+   ======================================== */
+
+/* ========================================
+   SECTION PERMIS TYPES (Voiture & Moto)
+   ======================================== */
+
+.permis-types {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #0F1216 0%, #1a1d24 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.permis-types::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+}
+
+.permis-types__header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.permis-types__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.permis-type__card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    padding: 3rem;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.permis-type__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 16px 16px 0 0;
+}
+
+.permis-type__card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.25);
+}
+
+.permis-type__card:hover::before {
+    opacity: 1;
+}
+
+.permis-type__card--moto {
+    border-color: rgba(254, 240, 13, 0.3);
+}
+
+.permis-type__card--moto::before {
+    background: linear-gradient(90deg, transparent, #F5C400, transparent);
+}
+
+.permis-type__card--moto:hover {
+    border-color: rgba(254, 240, 13, 0.5);
+    box-shadow: 0 20px 60px rgba(254, 240, 13, 0.3);
+}
+
+.permis-type__badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #F5C400 0%, #EAB308 100%);
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    animation: pulse-badge 2s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes pulse-badge {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(254, 240, 13, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(254, 240, 13, 0);
+    }
+}
+
+.permis-type__icon {
+    width: 120px;
+    height: 120px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: #3B82F6;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.permis-type__icon::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0.3;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.permis-type__icon--yellow {
+    background: rgba(254, 240, 13, 0.1);
+    color: #F5C400;
+}
+
+.permis-type__card:hover .permis-type__icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.permis-type__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.permis-type__text {
+    color: #B0B7C3;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: 1.0625rem;
+}
+
+.permis-type__list {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+}
+
+.permis-type__list li {
+    padding: 0.875rem 0;
+    color: rgba(176, 183, 195, 0.95);
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.permis-type__list li:last-child {
+    border-bottom: none;
+}
+
+.permis-type__list li:hover {
+    color: #FFFFFF;
+    padding-left: 10px;
+}
+
+.permis-type__card .btn {
+    margin-top: auto;
+    width: 100%;
+    max-width: 280px;
+}
+
+/* ========================================
+   SECTION LOGOS FINANCEMENT (Cliquables)
+   ======================================== */
+
+.financement-logos {
+    padding: 6rem 0;
+    background: #0F1216;
+    position: relative;
+}
+
+.financement-logos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+}
+
+.financement-logos__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.financement-logo__card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.financement-logo__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 16px 16px 0 0;
+}
+
+.financement-logo__card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 15px 50px rgba(59, 130, 246, 0.2);
+}
+
+.financement-logo__card:hover::before {
+    opacity: 1;
+}
+
+.financement-logo__card--featured {
+    border-color: rgba(254, 240, 13, 0.4);
+    box-shadow: 0 10px 40px rgba(254, 240, 13, 0.15);
+    background: linear-gradient(135deg, rgba(254, 240, 13, 0.05) 0%, rgba(254, 240, 13, 0.02) 100%);
+}
+
+.financement-logo__card--featured::before {
+    background: linear-gradient(90deg, transparent, #F5C400, transparent);
+}
+
+.financement-logo__card--featured:hover {
+    border-color: rgba(254, 240, 13, 0.6);
+    box-shadow: 0 15px 50px rgba(254, 240, 13, 0.3);
+    transform: translateY(-12px) scale(1.02);
+}
+
+.financement-logo__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.375rem 0.875rem;
+    background: linear-gradient(135deg, #F5C400 0%, #EAB308 100%);
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    animation: pulse-badge 2s ease-in-out infinite;
+}
+
+.financement-logo__icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #3B82F6;
+    transition: all 0.4s ease;
+}
+
+.financement-logo__card--featured .financement-logo__icon {
+    background: rgba(254, 240, 13, 0.15);
+    color: #F5C400;
+}
+
+.financement-logo__card:hover .financement-logo__icon {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.financement-logo__title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.financement-logo__text {
+    color: #B0B7C3;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+.financement-logos__cta {
+    text-align: center;
+}
+
+/* ========================================
+   STYLE LIEN EXTERNE KLAXO
+   ======================================== */
+
+.nav__link--external {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav__link--external svg {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.nav__link--external:hover svg {
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
+
+/* ========================================
+   RESPONSIVE PERMIS TYPES & FINANCEMENT
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .permis-types__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .financement-logos__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .permis-types {
+        padding: 4rem 0;
+    }
+    
+    .permis-types__header {
+        margin-bottom: 3rem;
+    }
+    
+    .permis-type__card {
+        padding: 2.5rem 2rem;
+    }
+    
+    .permis-type__icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .permis-type__title {
+        font-size: 1.75rem;
+    }
+    
+    .financement-logos {
+        padding: 4rem 0;
+    }
+    
+    .financement-logos__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .financement-logo__card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .financement-logo__icon {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .permis-type__card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .permis-type__icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .permis-type__title {
+        font-size: 1.5rem;
+    }
+    
+    .permis-type__badge {
+        top: 1rem;
+        right: 1rem;
+        font-size: 0.6875rem;
+        padding: 0.375rem 0.75rem;
+    }
+    
+    .financement-logos__grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .financement-logo__title {
+        font-size: 1.25rem;
+    }
+}
+
+/* ========================================
+   AMÉLIORATIONS VISUELLES GÉNÉRALES
+   ======================================== */
+
+/* Plus de profondeur sur les sections */
+.promo,
+.about,
+.advantages,
+.hours,
+.reviews,
+.cta-final {
+    position: relative;
+}
+
+.promo::before,
+.advantages::before,
+.reviews::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+}
+
+/* Effet glow sur les boutons au hover */
+.btn--primary:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+}
+
+.btn--secondary:hover {
+    box-shadow: 0 0 30px rgba(254, 240, 13, 0.5);
+}
+
+/* Animation subtile sur les cartes */
+@keyframes float-subtle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.promo__card:hover,
+.advantage__card:hover,
+.review__card:hover {
+    animation: float-subtle 2s ease-in-out infinite;
+}
+
+/* Meilleure lisibilité des textes */
+.section__title {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section__title--highlight {
+    filter: drop-shadow(0 0 20px rgba(254, 240, 13, 0.4));
 }
