@@ -28,7 +28,7 @@
             
            <div class="nav__menu" id="nav-menu">
     <div class="nav__menu" id="nav-menu">
-    <ul class="nav__list">
+     <ul class="nav__list">
         <li class="nav__item">
             <a href="index.html" class="nav__link">Accueil</a>
         </li>
@@ -45,7 +45,7 @@
             <a href="contact.html" class="nav__link">Contact</a>
         </li>
         
-        <!-- 🎯 DROPDOWN ESPACE ÉLÈVE -->
+        <!-- 🎯 DROPDOWN ESPACE ÉLÈVE AVEC KLAXO -->
         <li class="nav__item nav__item--dropdown">
             <a href="#" class="nav__link nav__link--dropdown">
                 Espace Élève
@@ -54,8 +54,9 @@
                 </svg>
             </a>
             
-            <!-- Sous-menu dropdown -->
+            <!-- Sous-menu dropdown avec 3 liens -->
             <ul class="nav__dropdown">
+                <!-- Lien 1 : Documents à fournir -->
                 <li class="nav__dropdown-item">
                     <a href="documents.html" class="nav__dropdown-link">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -64,6 +65,8 @@
                         Documents à fournir
                     </a>
                 </li>
+                
+                <!-- Lien 2 : Informations utiles -->
                 <li class="nav__dropdown-item">
                     <a href="informations.html" class="nav__dropdown-link">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -73,17 +76,25 @@
                         Informations utiles
                     </a>
                 </li>
+                
+                <!-- Lien 3 : Klaxo (NOUVEAU) -->
+                <li class="nav__dropdown-item">
+                    <a href="https://klaxo.fr" target="_blank" class="nav__dropdown-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        Klaxo
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px;">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </li>
         
-        <li class="nav__item">
-            <a href="https://klaxo.fr" target="_blank" class="nav__link nav__link--external">
-                Klaxo
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px;">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                </svg>
-            </a>
-        </li>
+        <!-- L'ANCIEN ONGLET KLAXO EST SUPPRIMÉ -->
+        
     </ul>
 </div>
 </div>
